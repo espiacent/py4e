@@ -1,0 +1,5 @@
+hours = input('How many hours?')
+rate = input('How much money?')
+pay = float(hours) * float(rate)
+pay = round(pay, 2)
+print(pay, 'Euro')
