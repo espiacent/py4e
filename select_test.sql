@@ -1,0 +1,1 @@
+SELECT Album.title;
