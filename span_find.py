@@ -28,7 +28,7 @@ for tag in tags:
     fout.write(str(tag.contents))
     lst.extend(tag.contents)
 
-try:        
+try:
     lst = list(map(int, lst))
     print(round(sum(lst)))
 except:

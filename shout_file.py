@@ -4,6 +4,6 @@ except:
     quit()
 
 text = handle.read()
-bold = text.upper() 
+bold = text.upper()
 
 print(bold)

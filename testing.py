@@ -12,25 +12,29 @@ tables at https://wikipedia.org/wiki/Letter_frequencies.
 import string
 
 fname = input('Enter file name:')
-if len(fname) < 1: fname = 'romeo-full.txt'
+if len(fname) < 1:
+    fname = 'romeo-full.txt'
 
-try: fhand = open(fname, 'r')
-except: print('File not found.'); raise SystemExit
+try:
+    fhand = open(fname, 'r')
+except:
+    print('File not found.')
+    raise SystemExit
 
 lst = []
-for line in fhand: 
+for line in fhand:
     line = line.lower().strip()
     line2 = line.translate(str.maketrans('', '', string.punctuation))
     lst.append(line2)
 
-lst2 = list(filter(None,lst))
+lst2 = list(filter(None, lst))
 str1 = ''.join(lst2)
 lst2 = list(str1)
 letters = {}
 final_list = []
 
 for letter in lst2:
-        letters[letter] = letters.get(letter, 0) + 1
+    letters[letter] = letters.get(letter, 0) + 1
 
 for k, v in list(letters.items()):
     final_list.append((k, v))

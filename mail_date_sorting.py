@@ -22,7 +22,8 @@ h_list_dict = {}
 final_list = []
 
 for line in fhand:
-    if not line.startswith('From') or line.startswith('From:') or line.find('@') == -1: continue
+    if not line.startswith('From') or line.startswith('From:') or line.find('@') == -1:
+        continue
     line = line.strip().split()
     date = line[5]
     hours = date[0:2]
@@ -30,12 +31,12 @@ for line in fhand:
 
 for hour in h_list:
     h_list_dict[hour] = h_list_dict.get(hour, 0) + 1
-    
-    #alternative:
-    #if hour not in h_list_dict:
-        #h_list_dict[hour] = 1
-    #else:
-        #h_list_dict[hour] += 1
+
+    # alternative:
+    # if hour not in h_list_dict:
+    #h_list_dict[hour] = 1
+    # else:
+    #h_list_dict[hour] += 1
 
 for k, v in list(h_list_dict.items()):
     final_list.append((k, v))

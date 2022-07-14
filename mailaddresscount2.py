@@ -19,7 +19,8 @@ except:
 addresses = {}
 line2 = []
 for line in fhand:
-    if not line.startswith('From') or line.startswith('From:') or line.find('@') == -1: continue
+    if not line.startswith('From') or line.startswith('From:') or line.find('@') == -1:
+        continue
     line = line.strip().split()
     mail = line[1]
     line2.append(mail)

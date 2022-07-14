@@ -1,4 +1,6 @@
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
+import urllib.parse
+import urllib.error
 import xml.etree.ElementTree as ET
 
 
@@ -14,8 +16,8 @@ results = tree.findall('comments/comment')
 data_len = len(results)
 
 for result in results:
-   number = float(result.find('count').text)
-   list.append(number)
+    number = float(result.find('count').text)
+    list.append(number)
 
 total = sum(list)
 print(total)

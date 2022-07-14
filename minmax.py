@@ -4,24 +4,24 @@ min = 0
 count = 0
 while True:
     line = input('Input number:')
-    if line == 'done' :
+    if line == 'done':
         break
     try:
         line = float(line)
     except:
         print('Invalid input. Enter number.')
         continue
-    else : 
+    else:
         count = count + 1
-        if count > 1 :
-            if line > max :
+        if count > 1:
+            if line > max:
                 max = line
-            elif line < min :    
+            elif line < min:
                 min = line
-        else :
+        else:
             max = line
             min = line
         continue
 print('Largest entered number was:', max)
 print('Smallest entered number was:', min)
-print ('Glad I could help.')
+print('Glad I could help.')

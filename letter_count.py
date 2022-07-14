@@ -4,7 +4,8 @@ def count():
         if letter == inp2:
             count = count + 1
     print(count)
-    
+
+
 inp1 = input('Enter word:')
 inp2 = input('Enter letter:')
 

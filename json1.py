@@ -1,4 +1,6 @@
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
+import urllib.parse
+import urllib.error
 import json
 
 list = []
@@ -9,4 +11,4 @@ file = urllib.request.urlopen(url).read()
 data = json.loads(file)
 
 for person in data['comments']:
-    list.append(person['count']) 
+    list.append(person['count'])
